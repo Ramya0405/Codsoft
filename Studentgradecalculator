@@ -1,0 +1,36 @@
+package Codsoft;
+import java.util.Scanner;
+public class Student_grade_calculator {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter maths marks:");
+    int maths = sc.nextInt();
+    System.out.print("Enter english marks:");
+    int english = sc.nextInt();
+    System.out.print("Enter science marks:");
+    int science = sc.nextInt();
+    System.out.print("Enter social marks:");
+    int social = sc.nextInt();
+    int sum = maths + english + science + social ;
+    System.out.println("Sum of subjects:" + sum);
+    double average_percentage = (sum/4);
+    System.out.println("Average_percentage:" + average_percentage );
+    String grade;
+    if(average_percentage>=90 && average_percentage<=100){
+        grade = "A";
+        System.out.println("Grade is:"+ grade);
+    }else if(average_percentage>=80 && average_percentage<90){
+        grade = "B";
+        System.out.println("Grade is:"+ grade);
+    }else if(average_percentage>=70 && average_percentage<80){
+        grade = "C";
+        System.out.println("Grade is:"+ grade);
+    }else if(average_percentage>=60 && average_percentage<70){
+        grade = "D";
+        System.out.println("Grade is:"+ grade);
+    }else{
+        System.out.println("Fail");
+    }
+    sc.close();
+  }
+}
